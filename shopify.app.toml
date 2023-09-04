@@ -1,3 +1,27 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+name = "fulfillmentMultipassApp"
+client_id = "6736cdcb6cc37c13f9c7f1147624f4cc"
+application_url = "https://account-seconds-rats-audit.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "read_orders,read_merchant_managed_fulfillment_orders,write_merchant_managed_fulfillment_orders"
+
+[auth]
+redirect_urls = [
+  "https://account-seconds-rats-audit.trycloudflare.com/auth/callback",
+  "https://account-seconds-rats-audit.trycloudflare.com/auth/shopify/callback",
+  "https://account-seconds-rats-audit.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-2bf0512c.myshopify.com"
